@@ -53,9 +53,13 @@ export default {
     }
   },
   methods: {
-    apply() {
-      // Search movies...
-
+    async apply() {
+      this.$store.dispatch('movie/searchMovies', {
+        title: this.title,
+        type: this.type,
+        number: this.number,
+        year: this.year
+      })
     }
   }
 }
