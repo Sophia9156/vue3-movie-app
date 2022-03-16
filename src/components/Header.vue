@@ -9,6 +9,7 @@
         <RouterLink 
         :to="nav.href"
         active-class="active"
+        :class="{active: isMatch(nav.path)}"
         class="nav-link">
           {{nav.name}}
         </RouterLink>
@@ -28,9 +29,15 @@ export default {
     return {
       navigations: [
         {name: 'Search', href: '/'},
-        {name: 'Movie', href: '/movie'},
+        {name: 'Movie', href: '/movie', path: /^\/movie/},
         {name: 'About', href: '/about'},
       ]
+    }
+  },
+  methods: {
+    isMatch(path) {
+      if(!path) return false
+      return path.test(this.$route.fullPath)
     }
   }
 }
