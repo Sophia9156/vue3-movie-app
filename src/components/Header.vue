@@ -29,7 +29,7 @@ export default {
     return {
       navigations: [
         {name: 'Search', href: '/'},
-        {name: 'Movie', href: '/movie', path: /^\/movie/},
+        {name: 'Movie', href: '/movie/tt4520988', path: /^\/movie/},
         {name: 'About', href: '/about'},
       ]
     }
@@ -38,7 +38,7 @@ export default {
     isMatch(path) {
       if(!path) return false
       return path.test(this.$route.fullPath)
-    }
+    },
   }
 }
 </script>

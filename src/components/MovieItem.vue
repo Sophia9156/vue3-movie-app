@@ -48,7 +48,7 @@ export default {
         await this.$loadImage(poster)
         this.imageLoading = false
       }
-    }
+    },
   }
 }
 </script>
