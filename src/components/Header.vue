@@ -29,7 +29,7 @@ export default {
     return {
       navigations: [
         {name: 'Search', href: '/'},
-        {name: 'Movie', href: '/movie/tt4520988', path: /^\/movie/},
+        {name: 'Movie', href: '/movie/tt10872600', path: /^\/movie/},
         {name: 'About', href: '/about'},
       ]
     }
